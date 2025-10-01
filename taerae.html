@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>TAERAE</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f2f2f2, #ffffff);
+            color: #222;
+            padding: 40px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* Banner superior */
+        .titulo-con-fondo {
+            background-image: url(TAERAE/6b31d129-73b7-4550-a5f4-eb3c72052977.jfif);
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 50px;
+        }
+
+        .titulo-con-fondo h1 {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+            margin: 0;
+        }
+
+         /* Subtítulos de secciones */
+        h2 {
+            color: #1d3557;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #1d3557;
+            padding-bottom: 5px;
+        }
+
+        /* Párrafos */
+        p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 30px;
+            text-align: justify;
+            font-family: 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Imágenes */
+        img {
+            width: 100%;
+            max-width: 650px;
+            border-radius: 12px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Líneas divisorias */
+        hr {
+            margin: 50px 0;
+            border: none;
+            height: 2px;
+            background-color: #ccc;
+        }
+
+        /* Contenedor del perfil estilo ficha */
+        .perfil {
+            display: flex;
+            gap: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+            padding: 25px;
+            align-items: flex-start;
+        }
+
+        .perfil-info {
+            flex: 2;
+        }
+
+        .perfil-info h2 {
+            color: #1d3557;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #1d3557;
+            padding-bottom: 5px;
+        }
+
+        .perfil-info ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .perfil-info li {
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+
+        .perfil-info strong {
+            color: #333;
+        }
+
+        .perfil-img {
+            flex: 1;
+            max-width: 300px;
+        }
+
+        .perfil-img img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .perfil-img img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Botón centrado */
+        .boton-centro {
+            text-align: center;
+            margin: 40px 0 20px;
+        }
+
+        .boton-centro a {
+            background-color: #145858;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+                 /* Pie de pagina */
+        footer {
+            background-color: #424747;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        footer a {
+            color: #cfe8e3;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Color distinto SOLO en el texto © */
+    footer p span {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+      footer a {
+            color: #cfe8e3;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            .perfil {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .perfil-info h2 {
+                font-size: 1.6rem;
+            }
+
+            .perfil-info li {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="titulo-con-fondo">
+        <h1>TAERAE</h1>
+    </div>
+
+    <!-- Botón de navegación -->
+    <div class="boton-centro">
+        <a href="intex.html">Regresar al Inicio</a>
+    </div>
+
+    <!-- Ficha estilo perfil -->
+    <div class="perfil">
+        <div class="perfil-info">
+            <h2>Perfil</h2>
+            <ul>
+                <li><strong>Nombre artístico:</strong> 태래 / Tae Rae</li>
+                <li><strong>Nombre completo:</strong> 김태래 / Kim Tae Rae</li>
+                <li><strong>Profesión:</strong> Rapero, Bailarín</li>
+                <li><strong>Fecha de nacimiento:</strong> 09-Mayo-2002 (23 Años)</li>
+                <li><strong>Estatura:</strong> 182 cm</li>
+                <li><strong>Signo zodiacal:</strong> Tauro</li>
+                <li><strong>Familia:</strong> Hermano menor</li>
+                <li><strong>Agencia:</strong> Yuehua Entertainment</li>
+            </ul>
+        </div>
+
+        <div class="perfil-img">
+            <img src="TAERAE/411d8475-979c-4248-b7b2-2b4c00882a6a.jfif" alt="TAERAE">
+        </div>
+    </div>
+
+    <h2>Pre-Debut</h2>
+    <p>Taerae nació en Seúl, pero se mudó a la provincia de Chungcheongnam y asistió desde la escuela primaria hasta la secundaria allí. Después de ser seleccionado para convertirse en aprendiz, se mudó a Seúl para estudiar y para su entrenamiento.</p>
+<hr>
+
+<h2>Debut en TEMPEST</h2>
+<p>El debut de Taerae con TEMPEST estaba originalmente programado para el 21 de febrero de 2022 con su primer mini álbum It's ME, It's WE ; sin embargo, su fecha de debut se retrasó luego al 2 de marzo de 2022 después de que todos los miembros del grupo dieran positivo por COVID-19.</p>
+<hr>
+
+<h2>Datos extras</h2>
+<p>– Sus colores favoritos son el rojo y el verde claro.</p>
+<p>– No le gusta el chocolate con menta, pero le gusta la pizza hawaiana.</p>
+<p>– Su ícono oficial es el búho (🦉). Lo eligió porque escuchó a los miembros decir muchas veces que se parece a un búho</p>
+<p>– En el grupo, sólo él y Hwarang son zurdos.</p>
+<p>– Antes de su debut, recibió mucha atención por su nombre poco común.</p>
+<p>– Su palabra clave, FELICIDAD, significa que encontrará una manera de disfrutar todo sin preocuparse por los prejuicios que lo rodean.</p>
+<hr>
+
+<h2>Galeria</h2>
+<img src="TAERAE/Kim_Tae_Rae_1.webp">
+<img src="TAERAE/Kim_Tae_Rae_2.webp">
+<img src="TAERAE/Kim_Tae_Rae_3.webp">
+<img src="TAERAE/Kim_Tae_Rae_4.webp">
+<img src="TAERAE/Kim_Tae_Rae_5.webp">
+<img src="TAERAE/Kim_Tae_Rae_6.webp">
+
+     <!-- Footer -->
+<footer>
+    <p><span>&copy; 2025 It’s ME It’s WE — Página de fans sin fines de lucro.</span></p>
+    
+    <div class="social-icons">
+        <a href="https://www.instagram.com/nat.bbnbin?igsh=MXdzMzFpOGxyNHgwbQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/HYUKBIN35700?t=pTQ62fC4Fd6VYyMC7uHTcA&s=08" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://wa.me/qr/EJQU2YXHLL4AP1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <p>
+        <a href="#">Política de privacidad</a> | 
+        <a href="#">Términos de uso</a> | 
+    </p>
+</footer>
+
+</body>
+</html>
