@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <title>It´s Me It´s We</title>
+
+    <!-- Google Fonts: Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+    <!-- Font Awesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* Reset básico */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Estilo general del cuerpo */
+         body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to right, #f2f2f2, #ffffff);
+            color: #222;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+/* Header */
+        header {
+            width: 100%;
+            background: linear-gradient(90deg, #1d3557, #457b9d);
+            color: white;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 15px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header-container h1 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            transition: transform 0.3s, color 0.3s;
+        }
+
+        nav a:hover {
+            transform: scale(1.1);
+            color: #f4d35e;
+        }
+
+        /* Contenido principal */
+        main {
+            flex: 1;
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Subtítulos de secciones */
+        h2 {
+            color: #1d3557;
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #1d3557;
+            padding-bottom: 5px;
+        }
+
+        /* Párrafos */
+        p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 30px;
+            text-align: justify;
+            font-family: 'Arial Narrow', Arial, sans-serif;
+        }
+
+        /* Imágenes */
+        img {
+            width: 100%;
+            max-width: 650px;
+            border-radius: 12px;
+            margin: 20px auto;
+            display: block;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.02);
+        }
+
+        /* Líneas divisorias */
+        hr {
+            margin: 50px 0;
+            border: none;
+            height: 2px;
+            background-color: #ccc;
+        }
+
+         /* Botón centrado */
+        .boton-centro {
+            text-align: center;
+            margin: 20px;
+        }
+
+        .boton-centro a {
+            background-color: #145858;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+         /* Título principal con fondo */
+        .titulo-con-fondo {
+            background-image: url(imagenes/45b54233-1ab1-482f-bb83-934c82394df2.jfif);
+            background-size: cover;
+            background-position: center;
+            padding: 100px 20px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            margin-bottom: 50px;
+        }
+
+        .titulo-con-fondo h1 {
+            font-size: 4rem;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+            margin: 0;
+        }
+
+        /* Formulario */
+        form {
+            max-width: 600px;
+            margin: 40px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        form label {
+            font-weight: bold;
+        }
+
+        input, textarea, button {
+            padding: 10px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+         button {
+            background: #1d3557;
+            color: white;
+            cursor: pointer;
+            border: none;
+        }
+
+        button:hover {
+            background: #0f2238;
+        }
+
+        /* Pie de pagina */
+        footer {
+            background-color: #424747;
+            color: white;
+            text-align: center;
+            padding: 25px 15px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        footer a {
+            color: #cfe8e3;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Color distinto SOLO en el texto © */
+    footer p span {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+      footer a {
+            color: #cfe8e3;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsivo */
+        @media (max-width: 768px) {
+            body {
+                padding: 20px 10px;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!--Encabezado-->
+    <header>
+        <div class="header-container">
+         <h1>Miembros de TEMPEST</h1>
+    <nav>
+      <a href="miembros.html"><i class="fa-solid fa-star"></i> Hanbin</a>
+      <a href="hyeo.html"><i class="fa-solid fa-music"></i> Hyeongseop</a>
+      <a href="hyuk.html"><i class="fa-solid fa-dragon"></i> Hyuk</a>
+      <a href="lew.html"><i class="fa-solid fa-guitar"></i> Lew</a>
+      <a href="eunchan.html"><i class="fa-solid fa-user"></i> Eunchan</a>
+      <a href="taerae.html"><i class="fa-solid fa-heart"></i> Taerae</a>
+      <a href="ex miembro.html"><i class="fa-solid fa-fire"></i> Hwarang</a>
+    </nav>
+      </div>
+    </header>
+
+    <main>
+    <div class="titulo-con-fondo">
+        <h1>TEMPEST</h1>
+    </div>
+
+    <h2>Pre-Debut</h2>
+    <p>El 8 de junio de 2021, Yuehua Entertainment registró oficialmente los tres nombres "TEMPEST", "TPST" y "템페스트".
+
+El 4 de octubre, Star News informó que Yuehua Entertainment debutaría con un nuevo grupo de chicos en la segunda mitad de 2021. También se indicó en el artículo que el grupo se llamaría "TEMPEST" y que Hyeong Seop y Eui Woong, quien previamente había debutado como el dúo Hyeongseop X Euiwoong, sería parte de la alineación del grupo.
+
+El 31 de diciembre, se abrieron las cuentas oficiales del grupo junto con el video animado de su logotipo y el 3 de enero de 2022, se publicaron fotos teaser de los siete miembros con la frase "WHO I AM?".
+
+El 18 de enero de 2022, lanzaron dos videos debut teaser presentando oficialmente a los integrantes Hwa Rang y Eun Chan. Anteriormente a esto, se reveló el calendario el cual incluiría el debut oficial del grupo. El 19 presentaron a LEW y a Hanbin y para terminar, el 20 se presentó a Tae Rae, Hyeong Seop y a Hyuk.</p>
+    <img src="imagenes/Tempest group photo.jpeg" alt="Debut con 1th Mini Album">
+    <hr>
+
+    <h2>2022: Debut con su Primer Mini Álbum 'It's ME, It's WE'</h2>
+    <p>El 19 de enero, TEMPEST lanzó un calendario promocional para su debut el 21 de febrero. El 8 de febrero, anunciaron que debutarían con su primer mini álbum It's ME, It's WE.
+
+Sin embargo, el 14 de febrero, se anunció que el debut del grupo se pospondrá hasta el 2 de marzo después de que los siete miembros dieron positivo por COVID-19.</p>
+    <img src="imagenes/💎JustHubii💎.jpeg" alt="It´s Me It´s WE">
+    <hr>
+
+    <h2>Regreso con su Segundo Mini Álbum 'SHINING UP'</h2>
+    <p>El 8 de Agosto de 2022, Tempest anunció a través de sus redes sociales que el grupo iba a hacer su regreso el 29 de agosto con su segundo mini álbum titulado ‘Shining Up’. Ese mismo día lanzarían el mini álbum con su pista principal llamada Can’t stop shining.
+
+El 22 de Agosto, día en el que revelaron el tracklist, mostraron cómo Hwa Rang participó en la letra de algunas de las canciones de mini álbum, entre ellas la pista principal.</p>
+    <img src="imagenes/🌻JustHubiiE🌻.jpeg" alt="Segundo Mini Album">
+    <hr>
+
+    <h2>Regreso con su Tercer mini álbum “ON and ON"</h2>
+    <p>El 7 de noviembre, el grupo anunció su intención de volver a finales de mes con su tercer mini álbum “ON and ON”.
+
+Del 8 al 10 de noviembre se lanzaron las fotos conceptuales de los integrantes y el 11 se liberaron teasers grupales. El 14 de noviembre se publicó la lista de canciones y el 15 un teaser para su canción principal “Dragon”.
+
+El 22 de noviembre, el grupo regresó con su tercer mini álbum “ON and ON” junto con el video musical de la canción principal “Dragon (飛上)”.
+
+La canción de género trap híbrido compara los “sueños” con un dragón que se eleva hacia el cielo.</p>
+    <img src="imagenes/descarga.jpeg" alt="ON and ON">
+    <hr>
+
+    <h2>2023: Regreso su Cuarto mini álbum "The Calm Before The Storm"</h2>
+    <p>El 30 de marzo, el grupo, anunció que regresarían con nueva música el próximo mes. El 31 de marzo compartió un calendario de promoción para su regreso en abril con “The Calm Before The Storm”.
+
+Del 3 al 5 de abril se liberaron las imágenes conceptuales individuales y el 6 de abril las fotos grupales.
+
+El 10 de abril se reveló la lista de canciones y el 11 un video teaser musical para “Dangerous”, su canción principal.
+
+El 16 de abril lanzaron un póster D-1 para el próximo lanzamiento.
+
+El 17 de abril se lanzó su cuarto mini álbum “The Calm Before The Storm” junto con el MV de "Dangerous".
+
+El 11 de mayo se liberó el video musical de la canción "Freak Show".</p>
+    <img src="imagenes/TEMPEST 4TH MINI ALBUM [폭풍전야] SHOWCASE.jpeg" alt="3th Mini Album">
+    <hr>
+
+    <h2>1th Single Album: Into the TEMPEST</h2>
+    <p>El grupo regreso con su primer album completo titulado "Into the TEMPEST" en el cual solo se encontraban tres cancniones, el tema principal "Vroom Vroom" con un tono mas brusco al que se veia en sus trabajos anteriores.
+
+"Dive" el cual fue la segunda cancion dedicada a sus fans por todo el apoyo que le habianotrogado un grupo, con un video musical grabado por ellos mismos y estrenado en un concierto exclusivo. En la mayoria de las canciones Hwarang y LEW participaron en la letras de las canciones.
+
+Despues de eso comenzaron su primer tour de conciertos llamado T-OUR en Japon, Osaka y Corea del Sur para poder estar junto a sus fans y pasar buenos momentos junto a iE (el nombre del fandom).
+    </p>
+    <img src="imagenes/TEMPEST PICS on X.jpeg" alt="1th Single Album">
+    <hr>
+
+    <!-- Formulario de contacto -->
+    <h2>Deja tu comentario</h2>
+   <form action="https://formspree.io/f/xovkdoyn" method="POST">
+  <label for="nombre">Nombre:</label>
+  <input type="text" id="nombre" name="nombre" required>
+
+  <label for="apellido">Apellido:</label>
+  <input type="text" id="apellido" name="apellido" required>
+
+  <label for="comentario">Comentario:</label>
+  <textarea id="comentario" name="comentario" required></textarea>
+
+  <button type="submit">Enviar</button>
+</form>
+    </main>
+
+   <!-- Footer -->
+<footer>
+    <p><span>&copy; 2025 It’s ME It’s WE — Página de fans sin fines de lucro.</span></p>
+    
+    <div class="social-icons">
+        <a href="https://www.instagram.com/nat.bbnbin?igsh=MXdzMzFpOGxyNHgwbQ==" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/HYUKBIN35700?t=pTQ62fC4Fd6VYyMC7uHTcA&s=08" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://wa.me/qr/EJQU2YXHLL4AP1" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+
+    <p>
+        <a href="#">Política de privacidad</a> | 
+        <a href="#">Términos de uso</a> | 
+    </p>
+</footer>
+
+</body>
+</html>
